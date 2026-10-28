@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireFair — Debiasing NLP Models in Resume Screening</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">⚖️ HireFair ATS</div>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#screening">Resume Screening</a>
+            <a href="#experiment">Gender Experiment</a>
+            <a href="#audit">Fairness Audit</a>
+            <a href="#explanation">Model & GRL</a>
+            <a href="#limitations">Limitations</a>
+        </nav>
+        <button class="btn btn-outline" id="btn-reset">Reset Demo</button>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: Overview -->
+        <section id="overview" class="card">
+            <h1>HireFair: Debiasing NLP Models in Automated Resume Screening</h1>
+            <p class="subtitle">An Auditable, Fair, and Transparent Automated Applicant Tracking System (ATS)</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="btn-run-full-demo">⚡ Run Full Live Demo</button>
+                <a href="#screening" class="btn btn-secondary">Screen Resumes</a>
+                <a href="#audit" class="btn btn-secondary">View Fairness Audit</a>
+            </div>
+        </section>
+
+        <!-- Section 2: Resume Screening -->
+        <section id="screening" class="card">
+            <h2>1. Resume Screening Dashboard</h2>
+            <div class="form-group">
+                <label for="job-description"><strong>Target Job Description:</strong></label>
+                <textarea id="job-description" rows="3">Looking for a Senior Software Engineer proficient in Python, SQL, PyTorch, Docker, Git, and Machine Learning.</textarea>
+            </div>
+            
+            <div class="screening-controls" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" id="btn-screen">Screen Resumes</button>
+                
+                <!-- Custom Resume File Upload Button -->
+                <label class="btn btn-secondary" style="cursor: pointer; margin: 0;">
+                    📂 Upload Resumes (.txt)
+                    <input type="file" id="resume-file-input" multiple accept=".txt" style="display: none;" onchange="updateFileLabel(this)">
+                </label>
+                <span id="file-count-label" style="font-size: 0.9rem; color: #64748b;">Using Built-in Sample Resumes</span>
+
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle-debias">
+                    <span class="slider"></span>
+                    <span class="toggle-label">Enable PyTorch Debiasing Model</span>
+                </label>
+            </div>
+
+            <div id="screening-output" class="output-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Candidate Name</th>
+                            <th>Score</th>
+                            <th>Decision</th>
+                            <th>Matched Skills</th>
+                            <th>Missing Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody id="screening-table-body">
+                        <tr><td colspan="6" class="text-center">Click "Screen Resumes" or "Run Full Live Demo" to view rankings.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Gender Bias Experiment -->
+        <section id="experiment" class="card">
+            <h2>2. Interactive Gender Bias Experiment</h2>
+            <p>Compare two candidate resumes with <strong>100% identical qualifications</strong>, varying only names and gendered pronouns.</p>
+            
+            <div class="dual-grid">
+                <div class="form-group">
+                    <label>Candidate A (Male Cues):</label>
+                    <textarea id="exp-male" rows="4">John Smith is a Software Engineer with 6 years experience in Python, SQL, PyTorch, Docker, Git, and Machine Learning. He has led backend API development.</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Candidate B (Female Cues):</label>
+                    <textarea id="exp-female" rows="4">Emily Smith is a Software Engineer with 6 years experience in Python, SQL, PyTorch, Docker, Git, and Machine Learning. She has led backend API development.</textarea>
+                </div>
+            </div>
+
+            <button class="btn btn-accent" id="btn-run-experiment">Run Gender Swap Experiment</button>
+            <div id="qualification-badge" class="badge-box"></div>
+
+            <div class="comparison-grid">
+                <div class="metric-card baseline-box">
+                    <h3>Standard Baseline Model (Biased)</h3>
+                    <div id="baseline-results">Pending experiment...</div>
+                </div>
+                <div class="metric-card debiased-box">
+                    <h3>HireFair Debiased Model</h3>
+                    <div id="debiased-results">Pending experiment...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Fairness Audit -->
+        <section id="audit" class="card">
+            <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>3. Algorithmic Fairness Audit & Metrics</h2>
+                <button class="btn btn-success" id="btn-download-csv">Download CSV Report</button>
+            </div>
+            <button class="btn btn-primary" id="btn-run-audit" style="margin-top: 1rem;">Run Audit Evaluation</button>
+
+            <div class="metrics-summary" id="metrics-summary">
+                <!-- Dynamic metric summary cards populated via JavaScript -->
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-box">
+                    <canvas id="chart-selection-rate"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="chart-tpr"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Model Explanation -->
+        <section id="explanation" class="card">
+            <h2>4. Adversarial Debiasing Model Architecture</h2>
+            <p>HireFair utilizes a PyTorch Neural Network trained with a <strong>Gradient Reversal Layer (GRL)</strong>:</p>
+            <ul>
+                <li><strong>Shared Feature Encoder ($E$):</strong> Learns latent candidate embeddings from skills and text similarity.</li>
+                <li><strong>Qualification Predictor ($P$):</strong> Optimizes standard Binary Cross Entropy ($\mathcal{L}_{task}$) for job fit prediction.</li>
+                <li><strong>Adversarial Gender Detector ($A$):</strong> Tries to detect sensitive gender attribute $S$ from the latent space.</li>
+                <li><strong>Gradient Reversal Layer (GRL):</strong> During backpropagation, GRL multiplies gradients from $A$ by $-\alpha$, forcing $E$ to unlearn gender cues while preserving qualification signals.</li>
+            </ul>
+            <button class="btn btn-outline" id="btn-train-pytorch" style="color: var(--primary); border-color: var(--primary);">Retrain PyTorch Adversarial Model</button>
+            <div class="chart-box-large">
+                <canvas id="chart-training-loss"></canvas>
+            </div>
+        </section>
+
+        
+    </main>
+    <script src="/static/app.js"></script>
+</body>
+</html>

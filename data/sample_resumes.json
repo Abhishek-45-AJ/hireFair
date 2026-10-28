@@ -1,0 +1,27 @@
+[
+  {
+    "id": "RES-01",
+    "name": "John Smith (Male)",
+    "text": "John Smith is a Senior Software Engineer with 6 years of experience in Python, SQL, PyTorch, Docker, Git, and Machine Learning. He has built scalable REST APIs using Flask and led team projects."
+  },
+  {
+    "id": "RES-02",
+    "name": "Emily Smith",
+    "text": "Emily Smith is a Senior Software Engineer with 6 years of experience in Python, SQL, PyTorch, Docker, Git, and Machine Learning. She has built scalable REST APIs using Flask and led team projects."
+  },
+  {
+    "id": "RES-03",
+    "name": "Alex Johnson (Junior Developer)",
+    "text": "Alex Johnson is a Junior Developer with 1 year of experience in HTML, CSS, JavaScript, and basic Python. Looking for an entry level software role."
+  },
+  {
+    "id": "RES-04",
+    "name": "Sarah Miller (Data Analyst)",
+    "text": "Sarah Miller is a Data Analyst with 4 years of experience in SQL, Python, Pandas, Data Analysis, and Project Management. She excels at visualization and business insights."
+  }, 
+  {
+    "id": "RES-05",
+    "name": "Merry Rock (Business Analyst)",
+    "text": "Merry Rock is a Business Analyst with 4 years of experience in Python, Pandas, Data Analysis, and Project Management. She excels at visualization and business insights."
+  }
+]

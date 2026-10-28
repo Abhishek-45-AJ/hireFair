@@ -1,0 +1,101 @@
+candidate_id,name,gender,gender_code,experience_years,skills,ground_truth_qualified,baseline_score,baseline_selected,debiased_score,debiased_selected
+CAND-001,James Wilson,Male,0,8,Docker; Python; SQL; PyTorch; Git,1,68.5,1,60.0,0
+CAND-002,Michael Brown,Male,0,8,Python; SQL; PyTorch; Git; Docker,1,68.5,1,60.0,0
+CAND-003,David Miller,Male,0,8,Git; PyTorch; Python; Docker,1,56.9,0,48.4,0
+CAND-004,Sarah Miller,Female,1,6,SQL; PyTorch; Git; Python; Docker,1,51.5,0,60.0,0
+CAND-005,David Miller,Male,0,3,SQL; PyTorch; Python; Git,1,56.9,0,48.4,0
+CAND-006,Michael Brown,Male,0,7,Git; Docker; SQL; PyTorch; Python,1,68.5,1,60.0,0
+CAND-007,James Wilson,Male,0,2,PyTorch; Docker,0,33.9,0,25.4,0
+CAND-008,Amanda Wilson,Female,1,7,SQL; Python; PyTorch; Docker,1,39.9,0,48.4,0
+CAND-009,Emily Smith,Female,1,4,Python; PyTorch,0,16.9,0,25.4,0
+CAND-010,Sarah Miller,Female,1,4,Python; PyTorch; Docker; Git; SQL,1,51.5,0,60.0,0
+CAND-011,Amanda Wilson,Female,1,8,PyTorch; Docker; Git; SQL,1,39.9,0,48.4,0
+CAND-012,David Miller,Male,0,5,SQL; PyTorch,0,33.9,0,25.4,0
+CAND-013,Robert Taylor,Male,0,1,PyTorch,0,22.5,0,14.0,0
+CAND-014,Jessica Brown,Female,1,3,SQL,0,5.5,0,14.0,0
+CAND-015,David Miller,Male,0,7,SQL; Git,0,33.9,0,25.4,0
+CAND-016,Amanda Wilson,Female,1,2,Docker,0,5.5,0,14.0,0
+CAND-017,John Smith,Male,0,3,Git; SQL; Docker; Python; PyTorch,1,68.5,1,60.0,0
+CAND-018,Michael Brown,Male,0,9,Git; PyTorch,0,33.9,0,25.4,0
+CAND-019,John Smith,Male,0,4,Git; PyTorch; Python; SQL; Docker,1,68.5,1,60.0,0
+CAND-020,Robert Taylor,Male,0,4,Python; Docker; SQL; Git; PyTorch,1,68.5,1,60.0,0
+CAND-021,Sarah Miller,Female,1,9,Python; PyTorch; SQL; Git; Docker,1,51.5,0,60.0,0
+CAND-022,David Miller,Male,0,7,Docker; Git; SQL; PyTorch,1,56.9,0,48.4,0
+CAND-023,John Smith,Male,0,9,SQL; Docker; PyTorch; Python,1,56.9,0,48.4,0
+CAND-024,Jessica Brown,Female,1,9,Git; Docker; SQL; PyTorch; Python,1,51.5,0,60.0,0
+CAND-025,Jessica Brown,Female,1,6,PyTorch,0,5.5,0,14.0,0
+CAND-026,Amanda Wilson,Female,1,7,SQL; Git,0,16.9,0,25.4,0
+CAND-027,Emily Smith,Female,1,1,PyTorch; Python,0,16.9,0,25.4,0
+CAND-028,John Smith,Male,0,1,Docker; PyTorch; Git,0,45.4,0,36.9,0
+CAND-029,Amanda Wilson,Female,1,7,Docker; SQL; Git,1,28.4,0,36.9,0
+CAND-030,Rachel Taylor,Female,1,4,SQL; Docker,0,16.9,0,25.4,0
+CAND-031,Jessica Brown,Female,1,6,Python; SQL; Git; Docker; PyTorch,1,51.5,0,60.0,0
+CAND-032,David Miller,Male,0,3,Python; SQL; PyTorch,1,45.4,0,36.9,0
+CAND-033,John Smith,Male,0,8,SQL; Docker,0,33.9,0,25.4,0
+CAND-034,Sarah Miller,Female,1,3,PyTorch; Git; Python; Docker,1,39.9,0,48.4,0
+CAND-035,Emily Smith,Female,1,2,PyTorch,0,5.5,0,14.0,0
+CAND-036,John Smith,Male,0,9,Python; SQL; Git,1,45.4,0,36.9,0
+CAND-037,Emily Smith,Female,1,8,Docker; Git; SQL; Python,1,39.9,0,48.4,0
+CAND-038,Jessica Brown,Female,1,9,Docker; PyTorch; SQL,1,28.4,0,36.9,0
+CAND-039,Sarah Miller,Female,1,2,PyTorch; SQL; Docker,0,28.4,0,36.9,0
+CAND-040,Robert Taylor,Male,0,4,PyTorch; SQL; Git,1,45.4,0,36.9,0
+CAND-041,Jessica Brown,Female,1,3,Docker; Python; Git; SQL; PyTorch,1,51.5,0,60.0,0
+CAND-042,Rachel Taylor,Female,1,1,PyTorch; SQL; Docker; Git,0,39.9,0,48.4,0
+CAND-043,James Wilson,Male,0,3,PyTorch,0,22.5,0,14.0,0
+CAND-044,Rachel Taylor,Female,1,6,PyTorch; SQL; Git,1,28.4,0,36.9,0
+CAND-045,John Smith,Male,0,5,SQL; Git; PyTorch,1,45.4,0,36.9,0
+CAND-046,John Smith,Male,0,3,Git; Docker,0,33.9,0,25.4,0
+CAND-047,Jessica Brown,Female,1,8,Python; Git,0,16.9,0,25.4,0
+CAND-048,Sarah Miller,Female,1,1,Git,0,5.5,0,14.0,0
+CAND-049,Robert Taylor,Male,0,7,Git; Docker,0,33.9,0,25.4,0
+CAND-050,James Wilson,Male,0,7,PyTorch,0,22.5,0,14.0,0
+CAND-051,Amanda Wilson,Female,1,3,Docker; Python; PyTorch; Git,1,39.9,0,48.4,0
+CAND-052,Jessica Brown,Female,1,9,Python; PyTorch,0,16.9,0,25.4,0
+CAND-053,Emily Smith,Female,1,4,SQL; Git,0,16.9,0,25.4,0
+CAND-054,Rachel Taylor,Female,1,5,PyTorch; Python; SQL; Docker,1,39.9,0,48.4,0
+CAND-055,James Wilson,Male,0,2,Docker; Python; PyTorch; Git,0,56.9,0,48.4,0
+CAND-056,Jessica Brown,Female,1,7,PyTorch; Docker,0,16.9,0,25.4,0
+CAND-057,John Smith,Male,0,5,Docker,0,22.5,0,14.0,0
+CAND-058,Emily Smith,Female,1,8,SQL; PyTorch; Docker; Python; Git,1,51.5,0,60.0,0
+CAND-059,Rachel Taylor,Female,1,6,Python; Git; SQL; Docker; PyTorch,1,51.5,0,60.0,0
+CAND-060,Robert Taylor,Male,0,6,Docker,0,22.5,0,14.0,0
+CAND-061,James Wilson,Male,0,5,Docker; PyTorch; Python; Git,1,56.9,0,48.4,0
+CAND-062,Emily Smith,Female,1,5,PyTorch; Docker,0,16.9,0,25.4,0
+CAND-063,Amanda Wilson,Female,1,3,SQL; PyTorch,0,16.9,0,25.4,0
+CAND-064,Sarah Miller,Female,1,1,Git; Python; SQL; Docker,0,39.9,0,48.4,0
+CAND-065,Emily Smith,Female,1,1,Docker; SQL; Python; Git; PyTorch,0,51.5,0,60.0,0
+CAND-066,John Smith,Male,0,1,SQL; Git,0,33.9,0,25.4,0
+CAND-067,Sarah Miller,Female,1,3,Docker; SQL,0,16.9,0,25.4,0
+CAND-068,Rachel Taylor,Female,1,2,Docker; Git; SQL,0,28.4,0,36.9,0
+CAND-069,Rachel Taylor,Female,1,8,SQL; PyTorch; Docker; Git,1,39.9,0,48.4,0
+CAND-070,Sarah Miller,Female,1,5,Docker,0,5.5,0,14.0,0
+CAND-071,Sarah Miller,Female,1,1,SQL; Git; PyTorch; Python; Docker,0,51.5,0,60.0,0
+CAND-072,John Smith,Male,0,3,Docker,0,22.5,0,14.0,0
+CAND-073,Emily Smith,Female,1,6,Docker; SQL; Python; Git; PyTorch,1,51.5,0,60.0,0
+CAND-074,Rachel Taylor,Female,1,9,Git; SQL; PyTorch,1,28.4,0,36.9,0
+CAND-075,Amanda Wilson,Female,1,3,Docker; SQL,0,16.9,0,25.4,0
+CAND-076,James Wilson,Male,0,5,SQL; Docker; Python; PyTorch,1,56.9,0,48.4,0
+CAND-077,Robert Taylor,Male,0,7,SQL; Python,0,33.9,0,25.4,0
+CAND-078,Michael Brown,Male,0,2,Git; PyTorch; Docker; SQL,0,56.9,0,48.4,0
+CAND-079,Robert Taylor,Male,0,6,PyTorch; Docker; Git; Python; SQL,1,68.5,1,60.0,0
+CAND-080,Sarah Miller,Female,1,5,Python; Docker; PyTorch; SQL; Git,1,51.5,0,60.0,0
+CAND-081,Rachel Taylor,Female,1,1,SQL; Git; Docker; PyTorch,0,39.9,0,48.4,0
+CAND-082,James Wilson,Male,0,4,Git; Docker; SQL; Python,1,56.9,0,48.4,0
+CAND-083,David Miller,Male,0,3,Docker; PyTorch; SQL,1,45.4,0,36.9,0
+CAND-084,Sarah Miller,Female,1,4,SQL; Docker; Python; PyTorch,1,39.9,0,48.4,0
+CAND-085,Michael Brown,Male,0,9,PyTorch; SQL; Docker; Git,1,56.9,0,48.4,0
+CAND-086,David Miller,Male,0,5,Git; SQL; Python; Docker; PyTorch,1,68.5,1,60.0,0
+CAND-087,Michael Brown,Male,0,4,Git,0,22.5,0,14.0,0
+CAND-088,Emily Smith,Female,1,5,Git; Docker; SQL,1,28.4,0,36.9,0
+CAND-089,Amanda Wilson,Female,1,8,Python; PyTorch; SQL; Docker,1,39.9,0,48.4,0
+CAND-090,Sarah Miller,Female,1,8,Git; PyTorch,0,16.9,0,25.4,0
+CAND-091,Jessica Brown,Female,1,6,PyTorch,0,5.5,0,14.0,0
+CAND-092,James Wilson,Male,0,3,Git; Docker; Python; PyTorch; SQL,1,68.5,1,60.0,0
+CAND-093,David Miller,Male,0,8,SQL; Git,0,33.9,0,25.4,0
+CAND-094,Emily Smith,Female,1,6,Git,0,5.5,0,14.0,0
+CAND-095,Robert Taylor,Male,0,9,SQL; Git; Docker,1,45.4,0,36.9,0
+CAND-096,Emily Smith,Female,1,3,Python,0,5.5,0,14.0,0
+CAND-097,Emily Smith,Female,1,5,SQL; Docker; Git; Python; PyTorch,1,51.5,0,60.0,0
+CAND-098,Robert Taylor,Male,0,3,PyTorch,0,22.5,0,14.0,0
+CAND-099,Michael Brown,Male,0,4,Git,0,22.5,0,14.0,0
+CAND-100,David Miller,Male,0,2,Git; Docker; Python,0,45.4,0,36.9,0
